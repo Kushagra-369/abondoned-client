@@ -29,10 +29,10 @@ export default function India() {
                     india.map((item, key) => (
                         <div
                             key={key}
-                            className={`flex items-center  py-10 ${key % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                            className={`md:flex items-center  py-10 ${key % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                                 }`}
                         >                  
-                                  <div className=' font-bold'>{item.name}</div>
+                                  <div className=' text-center font-bold'>{item.name}</div>
 
                             <div className="flex flex-col items-center text-center max-w-md">
                                 <img

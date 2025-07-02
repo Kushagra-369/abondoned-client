@@ -2,11 +2,11 @@ import React from 'react'
 
 export default function United_States() {
      let united = [
-            { name: " (i) ", link: "" , para:`Kanda Khark, located in Pauri Garhwal, Uttarakhand, is a part of the historical Garhwal region. While Kanda Khark itself may not have extensive historical records readily available, the broader Garhwal region boasts a rich history, particularly under the Katyuri and Garhwal kingdoms`},
-            { name: " (ii) Kuldhara ", link: "https://images.moneycontrol.com/static-mcnews/2025/01/20250117040151_1.jpg", para: "Kuldhara is an abandoned village in the Jaisalmer district of Rajasthan, India. Established around the 13th century, it was once a prosperous village inhabited by Paliwal Brahmins." },
-            { name: " (iii) Khobri ", link: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/bb/12/88/beautiful-nature-camp.jpg?w=400&h=300&s=1", para: "Khobri is a village located in the Sohna region of Gurugram (formerly Gurgaon) district in Haryana, India. It falls under the jurisdiction of the Harchandpur Gram Panchayat and the Sohna Block Panchayat." },
-            { name: " (iv) Dhanushkodi ", link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1T8KVV4hT6n1_AzkbMnZ9tD4u9oE7K9tdYA&s", para: "Dhanushkodi is an abandoned town at the south-eastern tip of Pamban Island of the state of Tamil Nadu in India.[1] It is south-east of Pamban and is about 24 kilometres (15 mi) west of Talaimannar in Sri Lanka." },
-            { name: " (v) Ross Island ", link: "https://www.go2andaman.com/wp-content/uploads/2021/01/Copy-of-Copy-of-Copy-of-1R6A1099-scaled-e1735714885168.jpg", para: " Ross Island, officially renamed Netaji Subhas Chandra Bose Island in 2018, is located approximately 3 km east of Port Blair in the Andaman and Nicobar Islands." },
+            { name: " (i)Centralia ", link: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Graffiti_Highway_-_Centralia%2C_Pennsylvania_%282019%29_b.jpg/250px-Graffiti_Highway_-_Centralia%2C_Pennsylvania_%282019%29_b.jpg" , para:`Centralia, Pennsylvania, is a near-ghost town known for its persistent underground coal mine fire that has been burning since 1962. The fire, originating in a landfill and spreading to the coal seams, has led to the evacuation and demolition of most of the town, leaving behind a landscape of abandoned streets and homes.`},
+            { name: " (ii)Hashima Island  ", link: "https://i.insider.com/59a9b31952c08026008b4a92?width=800&format=jpeg&auto=webp", para: "Hashima Island, also known as Battleship Island, is located off the coast of Nagasaki, Japan, not the U.S. North Brother Island, in New York City's East River, is often compared to Hashima Island due to its history as an abandoned island with remnants of past infrastructure." },
+            { name: " (iii)The City Hall Subway Station  ", link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1LT9828xOsLCR4BTIgatvdQ1Zvrr-5NuJPLS8MDNy1eZos00g&s", para: " The City Hall Subway Station in New York City, once the southern terminal of the city's first subway line, is a historic and architecturally significant landmark. Though no longer in regular passenger service, the station is still used as a turnaround loop for the 6 train." },
+            { name: " (iv)Eastern State Penitentiary  ", link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoH4kFpraDnk1Og1yWt5rKYGaC3BlhTfeCrQ&s", para: "Eastern State Penitentiary, located in Philadelphia, Pennsylvania, is a historic landmark that was once the most famous and expensive prison in the world. It was the first true 'penitentiary', designed to inspire penitence in its inmates through solitary confinement and strict discipline." },
+            { name: " (v)Detroit’s Packard Automotive Plant  ", link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs5-sNa2_cw6I06Ew5lrap_S_ikb3fLCooxQ&s", para: "The Packard Automotive Plant in Detroit, Michigan, is a historic manufacturing site that once produced luxury vehicles. Opened in 1903, it was a key part of Detroit's automotive industry and a notable example of early reinforced concrete construction." },
         ]
   return (
       <div
@@ -27,10 +27,10 @@ export default function United_States() {
                     united.map((item, key) => (
                         <div
                             key={key}
-                            className={`flex items-center  py-10 ${key % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                            className={`md:flex items-center  py-10 ${key % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                                 }`}
                         >                  
-                                  <div>{item.name}</div>
+                                  <div className=' text-center font-bold'>{item.name}</div>
 
                             <div className="flex flex-col items-center text-center max-w-md">
                                 <img
@@ -38,7 +38,7 @@ export default function United_States() {
                                     src={item.link}
                                     alt={item.name}
                                 />
-                                <p className="text-xl mt-4">
+                                <p className="text-xl mt-4 font-semibold">
                                     {item.para}
                                 </p>
                             </div>
