@@ -20,7 +20,7 @@ export default function United_Kingdom() {
                 backgroundPositionY: '60%',
             }}
         >
-            <div className="text-6xl font-extrabold text-center">2) UNITED KINGDOM</div>
+            <div className="text-6xl font-extrabold text-center">3) UNITED KINGDOM</div>
 
             <div className="py-20  gap-10 items-center text-4xl px-10">
                 {
