@@ -26,10 +26,10 @@ export default function Home() {
       className="bg-black text-red-500 py-10 text-center text-3xl md:text-5xl font-black italic tracking-wider"
       style={{
         backgroundImage:
-          "url(https://www.thepixelclub.com/wp-content/uploads/2021/03/thepixelclub-dunaterasz-budapest-09497-SLIDER.jpg)",
+          "url(https://www.2cents.my/wp-content/uploads/2018/03/2162-1.jpg)",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        backgroundPositionY: "10%",
+        backgroundPositionY: "center",
         backgroundPositionX: "center",
       }}
     >

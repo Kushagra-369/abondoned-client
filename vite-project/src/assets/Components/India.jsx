@@ -63,7 +63,7 @@ export default function India() {
                             variants={key % 2 === 0 ? fadeInLeft : fadeInRight}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true, amount: 0.2 }}
+                            viewport={{ once: false, amount: 0.2 }}
                             className={`md:flex items-center gap-10 py-10 ${key % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                         >
                             <div className="text-2xl md:text-3xl text-center md:text-left font-bold text-black w-full md:w-1/3">

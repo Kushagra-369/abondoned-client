@@ -65,7 +65,7 @@ export default function United_States() {
                             variants={key % 2 === 0 ? fadeInLeft : fadeInRight}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true, amount: 0.2 }}
+                            viewport={{ once: false, amount: 0.2 }}
                             className={`md:flex items-center gap-10 py-10 ${key % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                         >
                             <div className="text-2xl md:text-3xl font-bold text-black text-center md:text-left w-full md:w-1/3">
