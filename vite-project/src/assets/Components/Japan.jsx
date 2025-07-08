@@ -1,6 +1,8 @@
 import React from 'react';
 import { Element } from "react-scroll";
 import { motion } from 'framer-motion';
+import { Link as ScrollLink } from "react-scroll";
+import Home from './Home';
 
 export default function Japan() {
     const japan = [
@@ -66,7 +68,7 @@ export default function Japan() {
                             variants={key % 2 === 0 ? fadeInLeft : fadeInRight}
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: false, amount: 0.2 }}
+                            viewport={{ once: false, amount: 0.5 }}
                             className={`md:flex items-center gap-10 py-10 ${key % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                         >
                             <div className="text-2xl md:text-3xl font-bold text-black text-center md:text-left w-full md:w-1/3">
@@ -86,6 +88,16 @@ export default function Japan() {
                         </motion.div>
                     ))}
                 </div>
+                <ScrollLink
+                    to="home"
+                    smooth={true}
+                    duration={500}
+                    offset={-50}
+                >
+                    <div className="text-center text-2xl hover:text-red-500 cursor-pointer">
+                        Back to top
+                    </div>
+                </ScrollLink>
             </div>
         </Element>
     );
