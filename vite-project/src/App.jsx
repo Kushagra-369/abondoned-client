@@ -1,20 +1,25 @@
 import React from 'react'
-import Home from './assets/Components/Home'
-import India from './assets/Components/India'
-import United_States from './assets/Components/United_States'
-import United_Kingdom from './assets/Components/United_Kingdom'
-import Japan from './assets/Components/Japan'
-import Australia from './assets/Components/Australia'
+import App3 from './App3'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import App2 from './App2'
 export default function App() {
   return (
     <div>
+      <BrowserRouter>
+      
 
-      <Home/>
-      <India/>
-      <United_States/>
-      <United_Kingdom/>
-      <Japan/>
-      <Australia/>
+        <Routes>
+
+
+
+          <Route path='/' element={<App3 />} />
+          <Route path='/app2' element={<App2 />} />
+
+
+        </Routes>
+
+      </BrowserRouter>
+
     </div>
   )
 }

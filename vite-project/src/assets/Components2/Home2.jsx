@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import { scroller } from "react-scroll";
 import { Element } from "react-scroll";
+import image1 from '../images/horror1.jpg'
+import image2 from '../images/horror2.jpg'
 import { Link } from "react-router-dom";
-
-export default function Home() {
+import App from "../../App";
+export default function Home2() {
   const [isHovered, setIsHovered] = useState(false);
 
   const countries = [
-    { name: "India", code: "in", href: "india" },
-    { name: "United States", code: "us", href: "united_states" },
-    { name: "United Kingdom", code: "uk", href: "united_kingdom" },
-    { name: "Japan", code: "jp", href: "japan" },
-    { name: "Australia", code: "au", href: "australia" },
+    { name: "India", code: "in", href: "india2" },
+    { name: "United States", code: "us", href: "united_states2" },
+    { name: "United Kingdom", code: "uk", href: "united_kingdom2" },
+    { name: "Japan", code: "jp", href: "japan2" },
+    { name: "Australia", code: "au", href: "australia2" },
   ];
 
   const handleSelectChange = (e) => {
@@ -40,20 +42,20 @@ export default function Home() {
   };
 
   return (
-    <Element name="home">
+    <Element name="home2">
       <div className="relative">
         {/* Background Image Layer with Opacity */}
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage:
-              "url(https://www.2cents.my/wp-content/uploads/2018/03/2162-1.jpg)",
+            backgroundImage: `url(${image1})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            opacity: 0.7,
+            opacity: 0.9,
             zIndex: 0,
           }}
+
         ></div>
 
         {/* Content Layer */}
@@ -65,7 +67,7 @@ export default function Home() {
               textShadow: "2px 2px 8px rgba(0, 123, 255, 0.8)",
             }}
           >
-            ABANDONED PLACES ALL OVER THE WORLD
+            HORROR PLACES ALL OVER THE WORLD
           </div>
 
           <div className="p-10 text-2xl md:text-5xl text-blue-600 font-extrabold items-center flex justify-center gap-4 md:gap-10">
@@ -91,16 +93,16 @@ export default function Home() {
 
           </div>
           {/* Scary Button */}
-          <Link to="/app2">
+          <Link to="/">
             <div className="flex justify-center">
               <div
                 style={scaryButtonStyle}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-                onClick={() => alert("You were warned still you clicked so... 😈")}
+                onClick={() => alert("Nice decision... 😈")}
                 className="h-20 w-40 text-xl"
               >
-                DON'T CLICK
+                GO BACK
               </div>
             </div>
           </Link>
