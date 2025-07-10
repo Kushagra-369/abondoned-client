@@ -6,31 +6,26 @@ import Home2 from './Home2';
 
 export default function Japan2() {
     const japan = [
-        {
-            name: "(i) Nichitsu Ghost Town",
-            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-barE1DoieJu_TFxsR1kPPbfTPagOgeHxfg&s",
-            para: "Nichitsu Ghost Town in Saitama Prefecture was once a bustling mining town. It was abandoned in 1978 after the mine shut down."
+         {
+            name: "Aokigahara Forest ",
+            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY8Fyld9NUnnHferl6P8tnQ71zH3IlikRXaw&s",
+            para : `Aokigahara Forest, also known as the Sea of Trees (Jukai), is a dense, dark forest located at the northwest base of Mount Fuji in Japan. Also known as the "Suicide Forest," it gained infamy in modern times due to the high number of suicides committed there each year.`
         },
-        {
-            name: "(ii) Nagatani Village",
-            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFxDn-n5HjlnIxdABzcnAEOecyC64BfasT5A&s",
-            para: "Nagatani in Fukui was abandoned after plans for a dam caused residents to relocate. The dam was never built, but the village remained empty."
+          {
+            name: " ",
+            link: "",
+            para : ``
         },
-        {
-            name: "(iii) Nagoro 'Scarecrow' Village",
-            link: "https://i.ytimg.com/vi/_DqzQAEnATM/sddefault.jpg",
-            para: "Nagoro, in Tokushima, is known for its hundreds of handmade scarecrows that outnumber the few remaining residents."
+          {
+            name: " ",
+            link: "",
+            para : ``
         },
-        {
-            name: "(iv) Shimekko Village",
-            link: "https://discoverjapan.blog/wp-content/uploads/2024/05/83dbd7c689ffe86d9938fcb28d955ec4.webp",
-            para: "Shimekko Village in Hokkaido is slowly being overtaken by nature after years of depopulation. It was once a thriving farming community."
+          {
+            name: " ",
+            link: "",
+            para : ``
         },
-        {
-            name: "(v) Matsuo Mine Town",
-            link: "https://www.michaeljohngrist.com/wp-content/uploads/2009/08/matsuo-mine-ruined-apartments4.jpg",
-            para: "Once Japan’s largest sulfur mine, Matsuo Town was abandoned in 1969. Only the concrete remains of buildings are left behind."
-        }
     ];
 
     const fadeInUp = {

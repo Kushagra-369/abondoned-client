@@ -8,30 +8,36 @@ export default function India2() {
 
     const india = [
         {
-            name: " ",
-            link: "",
-            para: ``
+            name: "Bhangarh Fort",
+            link: "https://lakshmisharath.com/wp-content/uploads/2019/10/Bhangarh-Fort-15.jpg",
+            para: `Bhangarh Fort, located in Rajasthan, India, is a 17th-century fort . Bhangarh Fort's stories revolve around a curse, with two main legends contributing to its reputation as a haunted place.`
         },
         {
-            name: " ",
-            link: "",
-            para: ``
+            name: " Malcha Mahal",
+            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWY9yqBPUWWwPgBbPgBe-NGtnpTiua3j7Fxg&s",
+            para: `Malcha Mahal, a 14th-century hunting lodge, is a historic ruin located in the Chanakyapuri area of Delhi, India. It's known for its connection to the Tughlaq dynasty and for its association with the self-proclaimed Begum Wilayat Mahal and her descendants. `
         },
         {
-            name: " ",
-            link: "",
-            para: ``
+            name: "Aarey Colony ",
+            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAjzQntvziVJETnkUOhUoNxfz_7BAU8brBpg&s",
+            para: `Aarey Milk Colony in Mumbai is rumored to be haunted. It's known for stories of paranormal activity, particularly along the roads that wind through the forest area`
         },
         {
-            name: " ",
-            link: "",
-            para: ``
+            name: "Begunkodar railway station ",
+            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNjZGmSH-35CG5H3snaguQc1aUiCO924-Fxg&s",
+            para: `Begunkodar railway station, located in West Bengal, India, is infamously known as a haunted railway station. It gained this reputation due to stories of a ghostly woman in white who allegedly haunts the platforms and tracks.`
         },
         {
-            name: " ",
-            link: "",
-            para: ``
+            name: "Sanjay Van ",
+            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8C1KlVJl7GBgBgUSBBOSm6LkJVsBc68C9BA&s",
+            para: `Sanjay Van is a large urban forest located in Delhi , it is a large urban forest located in Delhi`
         },
+        {
+            name: "The Lambi Dehar Mines",
+            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwwFmUWchQaPo-dv0sgjzIS1SIPiWYWELCrAiuofdDPKmY541a&s",
+            para: `The Lambi Dehar Mines, near Mussoorie, are infamous for their tragic history and alleged haunting. In the 1990s, the mines were the site of a major disaster where over 50,000 workers are said to have died due to poor working conditions and respiratory illnesses caused by inhaling limestone dust`
+        },
+      
        
     ];
 
@@ -68,13 +74,13 @@ export default function India2() {
                             viewport={{ once: false, amount: 0.5 }}
                             className={`md:flex items-center gap-10 py-10 ${key % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                         >
-                            <div className="text-2xl md:text-3xl text-center md:text-left font-bold text-white w-full md:w-1/3">
+                            <div className="text-2xl md:text-4xl text-center md:text-left font-bold text-white w-full md:w-1/3">
                                 {item.name}
                             </div>
 
-                            <div className="flex flex-col items-center text-center max-w-md mx-auto bg-red-600  bg-opacity-90 rounded-xl shadow-xl p-6 transition duration-500 hover:scale-105 hover:shadow-2xl w-full md:w-2/3">
+                            <div className="flex flex-col items-center text-center max-w-md mx-auto bg-red-600  bg-opacity-90 rounded-xl shadow-xl p-6 transition duration-500 hover:scale-105 hover:shadow-2xl w-full md:w-500">
                                 <img
-                                    className="h-60 w-80 object-cover rounded-md mb-4 transition-transform duration-300 hover:rotate-1 hover:scale-105"
+                                    className="h-60 w-80 object-cover  rounded-md mb-4 transition-transform duration-300 hover:rotate-1 hover:scale-105"
                                     src={item.link}
                                     alt={item.name}
                                 />
