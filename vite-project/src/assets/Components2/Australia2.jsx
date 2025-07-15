@@ -7,30 +7,30 @@ import Home2 from './Home2';
 export default function Australia2() {
     const australia = [
         {
-            name: "(i) Wittenoom",
-            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-PoXBLM3kcqp7NOZcymnRYvwOfseRySwnrg&s",
-            para: "Wittenoom, formerly a mining town in Western Australia, is now a ghost town and the largest contaminated site in the Southern Hemisphere due to asbestos."
+            name: " ",
+            link: "",
+            para: ``
         },
         {
-            name: "(ii) Farina",
-            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNdgU4L6gxNT63mdCp-lN3I40TGj58SpoxVw&s",
-            para: "Farina, South Australia, is a historic ghost town located in the far north of the state. It was once a thriving town with a population of 600."
+            name: " ",
+            link: "",
+            para: ``
         },
         {
-            name: "(iii) Kookynie",
-            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsDCeGekYV-sXt0tacRTsSCtUmG8ARVew1Qg&s",
-            para: "Kookynie is a historic gold rush town in Western Australia. It once had over 2,500 people, now a ghost town known for the Grand Hotel."
+            name: " ",
+            link: "",
+            para: ``
         },
         {
-            name: "(iv) Big Bell",
-            link: "https://i.ytimg.com/vi/tc0ZkKUPjSI/sddefault.jpg",
-            para: "Big Bell is a ghost town in Western Australia, established in 1936 after the discovery of gold and the opening of the Big Bell Gold Mine."
+            name: " ",
+            link: "",
+            para: ``
         },
         {
-            name: "(v) Mary Kathleen",
-            link: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Mary_kathleen_qld.jpg",
-            para: "Mary Kathleen was a uranium mining town in Queensland. It was built for the Mary Kathleen Uranium Mine, active during 1958–63 and 1976–82."
-        }
+            name: " ",
+            link: "",
+            para: ``
+        },
     ];
 
     const fadeInUp = {

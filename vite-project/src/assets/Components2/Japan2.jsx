@@ -12,20 +12,31 @@ export default function Japan2() {
             para : `Aokigahara Forest, also known as the Sea of Trees (Jukai), is a dense, dark forest located at the northwest base of Mount Fuji in Japan. Also known as the "Suicide Forest," it gained infamy in modern times due to the high number of suicides committed there each year.`
         },
           {
-            name: " ",
-            link: "",
-            para : ``
+            name: "Inunaki Village",
+            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1RaGf9ps2taDrxocvTWS0sL210m0th6dUGQ&s",
+            para : `Inunaki Village is a Japanese urban legend about a fictional, lawless village said to be located near the Inunaki mountain pass in Fukuoka Prefecture. The legend describes a place where the Japanese constitution and laws do not apply, and where residents are hostile to outsiders, potentially engaging in violence and other crimes.`
         },
           {
-            name: " ",
-            link: "",
-            para : ``
+            name: "Kiyotaki Tunnel",
+            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFl2Vq6nalIzuOor4bHw4GdLv0189UepmjbQ&s",
+            para : `The Kiyotaki Tunnel, located in Kyoto, Japan, is a notorious location known for its eerie reputation and ghost stories. Built in the late 1920s for a railway line, it's said to be haunted by the spirits of workers who died during its construction under harsh conditions`
         },
           {
-            name: " ",
-            link: "",
-            para : ``
+            name: " Oiran Buchi Bridge",
+            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNxWNpZ6GvFx7XmY01qdHQasHDu2mHcOxhgg&s",
+            para : `The story of Oiran Buchi, also known as "The Courtesan's Bridge," is a chilling legend from Japan, specifically associated with a region in Yamanashi Prefecture. However, its eerie reputation has reached far and wide, including being recounted in places like Sapporo`
         },
+          {
+            name: "Himuro Residence",
+            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKy9W3D-0jC8RTZbX0HgM5pGXpCy-YXehvqw&s",
+            para : `The term "Himuro Residence" likely refers to Himuro Mansion, the primary setting for the video game Fatal Frame (also known as Project Zero). The mansion is depicted as a centuries-old structure, historically owned by the powerful Himuro family. It is located in the Himuro Mountain area, surrounded by five shrines that are believed to house powerful gods. The mansion is also associated with a dark ritual known as the "Sacrifice Ritual"`
+        },
+          {
+            name: "Doryodo Ruins",
+            link: "https://i0.wp.com/japanthis.com/wp-content/uploads/2015/10/doryodo-hachioji.jpg?ssl=1",
+            para : `The Doryodo Ruins, located within Otsukayama Park in Hachioji, Tokyo, are the remains of a temple that was once a popular place for prayer. The temple was demolished in the 1980s after a series of tragic events, including the murder of an elderly woman in 1963 and a young woman in 1973, which led to its association with ghostly phenomena.`
+        },
+        
     ];
 
     const fadeInUp = {
