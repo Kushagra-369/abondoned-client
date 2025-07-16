@@ -53,7 +53,7 @@ export default function Australia2() {
             <div
                 className="py-10"
                 style={{
-                    backgroundImage: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2kLqtN1BhkJkW1WeF9aQT4k4TUBIp0mb2nNwykJqD7-ye22HpOpkHXzmvxE2JNRoAjHk&usqp=CAU)',
+                    backgroundImage: 'url(https://thumbs.dreamstime.com/b/australian-flag-brush-stroke-black-stylized-representation-depicted-as-against-background-s-iconic-union-jack-upper-389532284.jpg)',
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
