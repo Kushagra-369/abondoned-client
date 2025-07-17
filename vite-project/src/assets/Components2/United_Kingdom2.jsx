@@ -2,7 +2,7 @@ import React from 'react';
 import { Element } from "react-scroll";
 import { motion } from 'framer-motion';
 import { Link as ScrollLink } from "react-scroll";
-import Home2 from './Home2';
+import './India.css';  // keep your India.css for flicker, blood-drip, ghost-hover, mystery-reveal styles
 
 export default function United_Kingdom2() {
     const united = [
@@ -36,22 +36,16 @@ export default function United_Kingdom2() {
             link: "https://images.timesnownews.com/thumb/msid-151496269,thumbsize-72620,width-400,height-225,resizemode-75/151496269.jpg",
             para: `Pluckley, a village in Kent, England, is widely known as "the most haunted village in England". It gained this reputation due to numerous ghost stories and paranormal accounts associated with the village. These stories have been documented and popularized in books and local folklore for over 70 years`
         },
-
     ];
-
-    const fadeInUp = {
-        hidden: { opacity: 0, y: 40 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
-    };
 
     const fadeInLeft = {
         hidden: { opacity: 0, x: -40 },
-        visible: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+        visible: { opacity: 1, x: 0, transition: { duration: 1 } }
     };
 
     const fadeInRight = {
         hidden: { opacity: 0, x: 40 },
-        visible: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+        visible: { opacity: 1, x: 0, transition: { duration: 1 } }
     };
 
     return (
@@ -59,14 +53,20 @@ export default function United_Kingdom2() {
             <div
                 className="py-10"
                 style={{
-                    backgroundImage:
-                        'url(https://c4.wallpaperflare.com/wallpaper/950/516/946/flag-britain-color-texture-wallpaper-thumb.jpg)',
+                    backgroundImage: 'url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShVUMhFDfkOZNYejletJlIi0lIGMEyXqg08_qlqOzC42KY4K0&s)',
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                 }}
             >
-                <h1 className="text-6xl font-extrabold text-center text-white drop-shadow-md">3) UNITED KINGDOM</h1>
+                <div className="text-center">
+                    <h1
+                        className="text-5xl font-black mb-16 flicker blood-drip inline-block"
+                        style={{ fontFamily: "'Creepster', cursive" }}
+                    >
+                        3) UNITED KINGDOM
+                    </h1>
+                </div>
 
                 <div className="py-20 space-y-20 px-6 md:px-10">
                     {united.map((item, key) => (
@@ -78,31 +78,30 @@ export default function United_Kingdom2() {
                             viewport={{ once: false, amount: 0.5 }}
                             className={`md:flex items-center gap-10 py-10 ${key % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                         >
-                            <div className="text-2xl md:text-3xl font-bold text-white text-center md:text-left w-full md:w-1/3">
-                                {item.name}
+                            <div
+                                className="text-3xl md:text-4xl text-center md:text-left font-bold text-red-600 w-full md:w-1/3 blood-drip ghost-hover"
+                                style={{ fontFamily: "'Creepster', cursive" }}
+                            >
+                                👻 {item.name}
                             </div>
 
-                            <div className="flex flex-col items-center text-center max-w-md mx-auto bg-red-500 bg-opacity-90 rounded-xl shadow-xl p-6 transition duration-500 hover:scale-105 hover:shadow-2xl w-full md:w-2/3">
+                            <div className="flex flex-col items-center text-center max-w-md mx-auto bg-black bg-opacity-70 border border-red-700 rounded-xl shadow-2xl p-6 transition duration-500 hover:scale-105 hover:shadow-red-500/50 w-full md:w-500 mystery-reveal">
                                 <img
-                                    className="h-60 w-80 object-cover rounded-md mb-4 transition-transform duration-300 hover:rotate-1 hover:scale-105"
+                                    className="h-60 w-80 object-cover rounded-md mb-4 grayscale hover:grayscale-0 transition-transform duration-300 hover:rotate-1 hover:scale-105 ghost-hover"
                                     src={item.link}
                                     alt={item.name}
                                 />
-                                <p className="text-lg font-medium text-cyan-300">
+                                <p className="text-md font-medium text-gray-200 italic flicker">
                                     {item.para}
                                 </p>
                             </div>
                         </motion.div>
                     ))}
                 </div>
-                <ScrollLink
-                    to="home2"
-                    smooth={true}
-                    duration={500}
-                    offset={-50}
-                >
-                    <div className="text-center text-2xl hover:text-red-500 cursor-pointer">
-                        Back to top
+
+                <ScrollLink to="home2" smooth={true} duration={500} offset={-50}>
+                    <div className="text-center text-xl text-white hover:text-red-500 cursor-pointer drop-shadow-md pt-10 flicker ghost-hover">
+                        ↑ Back to top
                     </div>
                 </ScrollLink>
             </div>
