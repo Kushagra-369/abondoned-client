@@ -1,0 +1,64 @@
+/* Ghostly hover effect - subtle floating and opacity change */
+.ghost-hover:hover {
+  animation: float 3s ease-in-out infinite;
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Mystery reveal: blur text until hover */
+.mystery-reveal p {
+  filter: blur(5px);
+  opacity: 0.5;
+  transition: filter 0.8s ease, opacity 0.8s ease;
+  cursor: default;
+}
+
+.mystery-reveal:hover p,
+.mystery-reveal:focus-within p {
+  filter: blur(0);
+  opacity: 1;
+  cursor: auto;
+}
+
+/* Keep flicker and blood-drip classes you had already */
+.flicker {
+  animation: flickerAnimation 2s infinite alternate;
+}
+
+@keyframes flickerAnimation {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.4;
+  }
+}
+
+.blood-drip {
+  position: relative;
+  color: #ff0000;
+}
+
+.blood-drip::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 15px;
+  background: #8B0000;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  animation: drip 1.5s infinite ease-in-out;
+}
+
+@keyframes drip {
+  0% { height: 15px; opacity: 1; }
+  50% { height: 25px; opacity: 0.6; }
+  100% { height: 15px; opacity: 1; }
+}
