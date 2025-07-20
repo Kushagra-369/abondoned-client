@@ -84,7 +84,7 @@ export default function United_States2() {
                             className={`md:flex items-center gap-10 py-10 ${key % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                         >
                             <div
-                                className="text-3xl md:text-4xl text-center md:text-left font-bold text-red-600 w-full md:w-1/3 blood-drip"
+                                className="text-3xl md:text-4xl text-center md:text-left font-bold text-red-600 w-full md:w-1/3 blood-drip2"
                                 style={{ fontFamily: "'Creepster', cursive" }}
                             >
                                 👻 {item.name}

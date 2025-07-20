@@ -61,7 +61,7 @@ export default function United_Kingdom2() {
             >
                 <div className="text-center">
                     <h1
-                        className="text-5xl font-black mb-16 flicker blood-drip inline-block"
+                        className="text-5xl font-black mb-16 flicker blood-drip2 inline-block"
                         style={{ fontFamily: "'Creepster', cursive" }}
                     >
                         3) UNITED KINGDOM

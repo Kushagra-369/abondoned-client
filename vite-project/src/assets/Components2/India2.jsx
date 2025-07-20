@@ -62,11 +62,15 @@ export default function India2() {
             >
                 <div className="text-center">
                     <h1
-                        className="text-5xl font-black mb-16 flicker blood-drip inline-block"
-                        style={{ fontFamily: "'Creepster', cursive" }}
+                        className="text-5xl font-black mb-16 flicker inline-block"
+                        style={{ fontFamily: "'Creepster', cursive", position: 'relative' }}
                     >
-                        1) INDIA'S HAUNTED LEGENDS
+                        <span className="blood-drip">1) INDIA'S HAUNTED LEGENDS</span>
+                        <span className="blood-drip2" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
+                            &nbsp;
+                        </span>
                     </h1>
+
                 </div>
 
                 <div className="py-20 space-y-20 px-6 md:px-10">
@@ -80,7 +84,7 @@ export default function India2() {
                             className={`md:flex items-center gap-10 py-10 ${key % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                         >
                             <div
-                                className="text-3xl md:text-4xl text-center md:text-left font-bold text-red-600 w-full md:w-1/3 blood-drip ghost-hover"
+                                className="text-3xl md:text-4xl text-center md:text-left font-bold text-red-600 w-full md:w-1/3 blood-drip2 ghost-hover"
                                 style={{ fontFamily: "'Creepster', cursive" }}
                             >
                                 👻 {item.name}

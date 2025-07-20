@@ -6,8 +6,12 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* Mystery reveal: blur text until hover */
@@ -25,7 +29,7 @@
   cursor: auto;
 }
 
-/* Keep flicker and blood-drip classes you had already */
+/* Flicker effect */
 .flicker {
   animation: flickerAnimation 2s infinite alternate;
 }
@@ -39,26 +43,70 @@
   }
 }
 
-.blood-drip {
+/* Blood drip base styles */
+.blood-drip,
+.blood-drip2 {
   position: relative;
   color: #ff0000;
 }
 
+/* Drip 1 (starts immediately) */
 .blood-drip::after {
   content: '';
   position: absolute;
-  width: 4px;
-  height: 15px;
-  background: #8B0000;
-  left: 50%;
-  bottom: -15px;
-  transform: translateX(-50%);
-  border-radius: 2px;
-  animation: drip 1.5s infinite ease-in-out;
+  width: 2px;
+  height: 0px;
+  background: #ec0606;
+  left: 90%;
+  top: 80%;
+  transform: translateX(-50%) scaleX(0.3);
+  border-radius: 50% 50% 80% 80% / 10% 10% 80% 80%;
+  animation: drip 10s infinite ease-in-out;
+  animation-delay: 0s;
+  animation-fill-mode: both;
 }
 
+/* Drip 2 (starts 5s later) */
+.blood-drip2::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 0px;
+  background: #ec0606;
+  left: 22%;
+  top: 80%;
+  transform: translateX(-50%) scaleX(0.3);
+  border-radius: 50% 50% 80% 80% / 10% 10% 80% 80%;
+  animation: drip 10s infinite ease-in-out;
+  animation-delay: 5s;
+  animation-fill-mode: both;
+}
+
+/* Drip animation with slim top and fat bottom */
 @keyframes drip {
-  0% { height: 15px; opacity: 1; }
-  50% { height: 25px; opacity: 0.6; }
-  100% { height: 15px; opacity: 1; }
+  0% {
+    height: 0px;
+    transform: translateX(-50%) scaleX(0.2);
+    opacity: 0;
+  }
+  25% {
+    height: 25px;
+    transform: translateX(-50%) scaleX(0.4);
+    opacity: 0.3;
+  }
+  50% {
+    height: 50px;
+    transform: translateX(-50%) scaleX(0.6);
+    opacity: 0.5;
+  }
+  75% {
+    height: 75px;
+    transform: translateX(-50%) scaleX(0.8);
+    opacity: 0.7;
+  }
+  100% {
+    height: 100px;
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
+  }
 }
