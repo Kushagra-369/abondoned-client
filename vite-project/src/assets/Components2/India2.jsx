@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Element } from "react-scroll";
 import { motion } from 'framer-motion';
 import { Link as ScrollLink } from "react-scroll";
 import './India.css';
 
 export default function India2() {
+    const [showMore, setShowMore] = useState(false);
 
     const india = [
         {
@@ -37,6 +38,11 @@ export default function India2() {
             link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwwFmUWchQaPo-dv0sgjzIS1SIPiWYWELCrAiuofdDPKmY541a&s",
             para: `Thousands of workers died in agony in these cursed mines near Mussoorie. Locals claim the dead still scream through the fog.`
         },
+        {
+            name: "Dumas Beach",
+            link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRbl1E6CRGcWFRrAGpwPIC-GzlvSzeJDFYfw&s",
+            para: `Dumas Beach, located in Gujarat, India, is renowned for its dark sand and its reputation as a haunted location. The beach's eerie atmosphere is linked to its history as a Hindu burial ground.`
+        },
     ];
 
     const fadeInLeft = {
@@ -66,15 +72,12 @@ export default function India2() {
                         style={{ fontFamily: "'Creepster', cursive", position: 'relative' }}
                     >
                         <span className="blood-drip">1) INDIA'S HAUNTED LEGENDS</span>
-                        <span className="blood-drip2" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
-                            &nbsp;
-                        </span>
+                        <span className="blood-drip2" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>&nbsp;</span>
                     </h1>
-
                 </div>
 
                 <div className="py-20 space-y-20 px-6 md:px-10">
-                    {india.map((item, key) => (
+                    {(showMore ? india : india.slice(0, 5)).map((item, key) => (
                         <motion.div
                             key={key}
                             variants={key % 2 === 0 ? fadeInLeft : fadeInRight}
@@ -104,8 +107,17 @@ export default function India2() {
                     ))}
                 </div>
 
+                {/* See More toggle */}
+                <div
+                    className="text-center text-lg text-white hover:text-red-500 cursor-pointer pb-6 flicker ghost-hover"
+                    onClick={() => setShowMore(!showMore)}
+                >
+                    {showMore ? 'Show Less' : 'See More'}
+                </div>
+
+                {/* Back to top */}
                 <ScrollLink to="home2" smooth={true} duration={500} offset={-50}>
-                    <div className="text-center text-xl text-white hover:text-red-500 cursor-pointer drop-shadow-md pt-10 flicker ghost-hover">
+                    <div className="text-center text-xl text-white hover:text-red-500 cursor-pointer drop-shadow-md pt-4 flicker ghost-hover">
                         ↑ Back to top
                     </div>
                 </ScrollLink>

@@ -1,45 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Element } from "react-scroll";
 import { motion } from 'framer-motion';
 import { Link as ScrollLink } from "react-scroll";
-import './India.css'; // Use the same CSS file with flicker, blood-drip, mystery-reveal, ghost-hover classes
+import './India.css'; // Ensure this contains flicker, blood-drip, ghost-hover, mystery-reveal, etc.
 
 export default function United_States2() {
+    const [showMore, setShowMore] = useState(false);
+
     const united = [
         {
-            name: " Willows Weep",
+            name: "Willows Weep",
             link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjepKQkUdzwiXAvsnQtMWfhEhpfwUKbIJP7nBdXQ4FpjwwYxE7LV4NrnynKYLtkB0S6Fg&usqp=CAU",
             para : `Willows Weep, located in Cayuga, Indiana, is a house notorious for its dark reputation as one of the most haunted and potentially evil places in America`
         },
-         {
-            name: "Lake Shawnee  ",
+        {
+            name: "Lake Shawnee",
             link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSl3QWdPFot56oBKSt_MXVGxNz2Hnnl_yDPw&s",
             para : `Lake Shawnee Abandoned Amusement Park, located in Princeton, West Virginia, is known for its tragic history and eerie atmosphere. It was built on a site with a dark past, including a Native American burial ground and a brutal massacre of settlers`
         },
-         {
-            name: " Skinwalker Ranch",
+        {
+            name: "Skinwalker Ranch",
             link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhgFV83hgAETA_SM65IblD8ruiiZFkQOhqfA&s",
             para : `Skinwalker Ranch, also known as Sherman Ranch, is a property in Utah rumored to be the site of paranormal and UFO-related phenomena. The ranch's name is derived from the Navajo legend of the skin-walker, a malevolent shapeshifting entity`
         },
-         {
-            name: "Bell Witch Cave ",
+        {
+            name: "Bell Witch Cave",
             link: "https://www.bellwitchcave.com/wp-content/themes/yootheme/cache/IMG_8014-1-scaled-5611ca3d.jpeg",
-            para : `The Bell Witch Cave, located in Adams, Tennessee, is a key site in the Bell Witch legend, a famous American haunting story.Beginning in 1817 and continuing until 1821, John Bell and his family were allegedly “haunted” by a devilish spirit called a “witch” known as “Kate.”`
+            para : `The Bell Witch Cave, located in Adams, Tennessee, is a key site in the Bell Witch legend. Beginning in 1817, John Bell and his family were allegedly haunted by a spirit known as "Kate."`
         },
-         {
-            name: "LaLaurie Mansion ",
+        {
+            name: "LaLaurie Mansion",
             link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVGvlIYjDeMYF_cxknQ6YtXSJLmNENYWFI5Q&s",
-            para : `The LaLaurie Mansion, located at 1140 Royal Street in the French Quarter of New Orleans, Louisiana, is one of the most infamous haunted houses in the United States.In 1834, a fire broke out in the mansion, leading to the horrifying discovery of enslaved individuals who had been brutally tortured and kept in deplorable conditions in a locked attic room `
+            para : `The LaLaurie Mansion in New Orleans is infamous for the 1834 discovery of enslaved people tortured in horrific conditions, making it one of America’s most disturbing haunted houses.`
         },
-         {
-            name: "Bachelor’s Grove Cemetery ",
+        {
+            name: "Bachelor’s Grove Cemetery",
             link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEz52kb-wtCYM0_yDy9lggZBzNC6ZI7UJhsg&s",
-            para : `Bachelor’s Grove Cemetery, located near 143rd Street and Ridgeland Avenue in Midlothian, Illinois, is a small, abandoned burial ground it originally served as a final resting place for early settlers and German immigrants. Though it was once a peaceful rural cemetery, by the 1960s it fell into neglect and became a hotspot for vandalism and illegal activity`
+            para : `Bachelor’s Grove Cemetery in Illinois, once peaceful, is now known for ghost sightings, paranormal lights, and eerie silence among the abandoned tombstones.`
         },
-         {
-            name: "Washington Square Park ",
+        {
+            name: "Washington Square Park",
             link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMFVBOQbXrJA96fl8_1liKwyaJnfBg6qR6hg&s",
-            para : `Washington Square Park is located in the Greenwich Village neighborhood of Lower Manhattan, New York City. Nearby New York University's Washington Square Campus, particularly the Elmer Holmes Bobst Library, has witnessed multiple suicides, leading to reports of strange sounds, including the rustling of papers, and the appearance of a ghostly librarian.`
+            para : `Built on a former burial ground, Washington Square Park in NYC is haunted by the thousands buried beneath. Strange noises and ghostly apparitions are often reported.`
         },
     ];
 
@@ -74,7 +76,7 @@ export default function United_States2() {
                 </div>
 
                 <div className="py-20 space-y-20 px-6 md:px-10">
-                    {united.map((item, key) => (
+                    {(showMore ? united : united.slice(0, 5)).map((item, key) => (
                         <motion.div
                             key={key}
                             variants={key % 2 === 0 ? fadeInLeft : fadeInRight}
@@ -91,7 +93,7 @@ export default function United_States2() {
                             </div>
 
                             <div
-                                tabIndex={0} // To enable :focus-within for mystery reveal on keyboard/mobile tap
+                                tabIndex={0}
                                 className="ghost-hover mystery-reveal flex flex-col items-center text-center max-w-md mx-auto bg-black bg-opacity-70 border border-red-700 rounded-xl shadow-2xl p-6 transition duration-500 hover:scale-105 hover:shadow-red-500/50 w-full md:w-2/3"
                             >
                                 <img
@@ -107,13 +109,17 @@ export default function United_States2() {
                     ))}
                 </div>
 
-                <ScrollLink
-                    to="home2"
-                    smooth={true}
-                    duration={500}
-                    offset={-50}
+                {/* Toggle See More / Show Less */}
+                <div
+                    className="text-center text-lg text-white hover:text-red-500 cursor-pointer pb-6 flicker ghost-hover"
+                    onClick={() => setShowMore(!showMore)}
                 >
-                    <div className="text-center text-xl text-white hover:text-red-500 cursor-pointer drop-shadow-md pt-10 flicker">
+                    {showMore ? 'Show Less' : 'See More'}
+                </div>
+
+                {/* Back to Top Link */}
+                <ScrollLink to="home2" smooth={true} duration={500} offset={-50}>
+                    <div className="text-center text-xl text-white hover:text-red-500 cursor-pointer drop-shadow-md pt-4 flicker">
                         ↑ Back to top
                     </div>
                 </ScrollLink>

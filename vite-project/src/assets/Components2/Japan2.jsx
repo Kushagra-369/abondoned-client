@@ -6,6 +6,7 @@ import './India.css';  // reuse the same css from India2
 
 export default function Japan2() {
   const [revealedIndex, setRevealedIndex] = useState(null);
+  const [showMore, setShowMore] = useState(false);
 
   const japan = [
     {
@@ -76,7 +77,7 @@ export default function Japan2() {
         </div>
 
         <div className="py-20 space-y-20 px-6 md:px-10">
-          {japan.map((item, key) => (
+          {(showMore ? japan : japan.slice(0, 5)).map((item, key) => (
             <motion.div
               key={key}
               variants={key % 2 === 0 ? fadeInLeft : fadeInRight}
@@ -110,6 +111,13 @@ export default function Japan2() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div
+          className="text-center text-lg text-white hover:text-red-500 cursor-pointer pb-6 flicker ghost-hover"
+          onClick={() => setShowMore(!showMore)}
+        >
+          {showMore ? 'Show Less' : 'See More'}
         </div>
 
         <ScrollLink to="home2" smooth={true} duration={500} offset={-50}>

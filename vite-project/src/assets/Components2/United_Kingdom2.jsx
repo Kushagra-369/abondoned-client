@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Element } from "react-scroll";
 import { motion } from 'framer-motion';
 import { Link as ScrollLink } from "react-scroll";
 import './India.css';  // keep your India.css for flicker, blood-drip, ghost-hover, mystery-reveal styles
 
 export default function United_Kingdom2() {
+    const [showMore, setShowMore] = useState(false);
+
     const united = [
         {
             name: "Champness Hall",
@@ -69,7 +71,7 @@ export default function United_Kingdom2() {
                 </div>
 
                 <div className="py-20 space-y-20 px-6 md:px-10">
-                    {united.map((item, key) => (
+                    {(showMore ? united : united.slice(0, 5)).map((item, key) => (
                         <motion.div
                             key={key}
                             variants={key % 2 === 0 ? fadeInLeft : fadeInRight}
@@ -97,6 +99,13 @@ export default function United_Kingdom2() {
                             </div>
                         </motion.div>
                     ))}
+                </div>
+
+                <div
+                    className="text-center text-lg text-white hover:text-red-500 cursor-pointer pb-6 flicker ghost-hover"
+                    onClick={() => setShowMore(!showMore)}
+                >
+                    {showMore ? 'Show Less' : 'See More'}
                 </div>
 
                 <ScrollLink to="home2" smooth={true} duration={500} offset={-50}>

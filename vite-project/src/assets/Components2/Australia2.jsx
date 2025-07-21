@@ -6,6 +6,7 @@ import './India.css';  // reuse flicker & blood-drip CSS here
 
 export default function Australia2() {
   const [revealedIndex, setRevealedIndex] = useState(null);
+  const [showMore, setShowMore] = useState(false);
 
   const australia = [
     {
@@ -71,7 +72,7 @@ export default function Australia2() {
         </div>
 
         <div className="py-20 space-y-20 px-6 md:px-10">
-          {australia.map((item, key) => (
+          {(showMore ? australia : australia.slice(0, 5)).map((item, key) => (
             <motion.div
               key={key}
               variants={key % 2 === 0 ? fadeInLeft : fadeInRight}
@@ -105,6 +106,13 @@ export default function Australia2() {
               </div>
             </motion.div>
           ))}
+        </div>
+
+        <div
+          className="text-center text-lg text-white hover:text-red-500 cursor-pointer pb-6 flicker ghost-hover"
+          onClick={() => setShowMore(!showMore)}
+        >
+          {showMore ? 'Show Less' : 'See More'}
         </div>
 
         <ScrollLink to="home2" smooth={true} duration={500} offset={-50}>
